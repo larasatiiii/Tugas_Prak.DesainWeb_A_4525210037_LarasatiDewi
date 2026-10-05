@@ -1,0 +1,71 @@
+ BODY {
+        margin: 0;
+        font-family: Poppins, Arial, sans-serif;
+        background-color: #F4F6F7;
+        color: #333;
+    }
+
+    .container {
+        width: 80%;
+        max-width: 800px;
+        margin: 40px auto;
+    }
+
+    .card {
+        background-color: white;
+        padding: 25px;
+        margin-bottom: 20px;
+        border-radius: 10px;
+    }
+
+    .color-box {
+        display: inline-block;
+        width: 120px;
+        padding: 20px;
+        margin-right: 10px;
+        color: white;
+        text-align: center;
+        border-radius: 8px;
+    }
+
+    .utama {
+        background-color: #4A90E2;
+    }
+
+    .aksen {
+        background-color: #2ECC71;
+    }
+
+       .aksen2 {
+        background-color: #dd3c71;
+    }
+
+        .aksen3 {
+        background-color: #F5A623;
+    }
+
+        .aksen4 {
+        background-color: #9b59b6;
+    }
+
+
+    h1 {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .poppins {
+        font-family: Poppins, Arial, sans-serif;
+    }
+
+    .arial {
+        font-family: Arial, sans-serif;
+    }
