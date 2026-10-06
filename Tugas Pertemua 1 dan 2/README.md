@@ -17,3 +17,7 @@ Website sederhana yang dibuat menggunakan HTML untuk menampilkan informasi menge
 ## Hasil
 
 Website menggunakan navigasi internal untuk berpindah ke setiap bagian informasi kampus serta menyediakan tautan media sosial dan kontak Universitas Pancasila.
+
+### Hasil Screenshot
+
+![Hasil Tugas](hasil-tugas.jpeg)
