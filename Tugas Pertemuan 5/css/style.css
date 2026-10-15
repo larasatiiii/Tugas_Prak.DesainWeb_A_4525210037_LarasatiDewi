@@ -1,0 +1,302 @@
+/* CSS wireframe InfoKita - layout sederhana */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #222;
+    background: #f2f2f2;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 6%;
+    background: white;
+    border-bottom: 1px solid #bbb;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #dcdcdc;
+    border: 1px solid #999;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.brand h1 {
+    margin: 0;
+    font-size: 25px;
+}
+
+.brand p {
+    margin: 3px 0 0;
+    font-size: 13px;
+}
+
+.tanggal {
+    color: #555;
+    font-size: 13px;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    gap: 0;
+    padding: 0 6%;
+    background: #444;
+}
+
+.navbar a {
+    display: block;
+    padding: 14px 18px;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.navbar a:hover,
+.navbar a.aktif {
+    background: #777;
+}
+
+/* Isi halaman */
+.container {
+    width: 88%;
+    margin: 22px auto;
+}
+
+/* Headline horizontal */
+.headline {
+    display: grid;
+    grid-template-columns: 42% 1fr;
+    background: white;
+    border: 1px solid #bbb;
+    margin-bottom: 24px;
+}
+
+.headline-image {
+    min-height: 230px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #dedede;
+    border-right: 1px dashed #999;
+    color: #555;
+    font-size: 13px;
+}
+
+.headline-text {
+    padding: 20px 24px;
+}
+
+.label {
+    margin: 0 0 8px;
+    color: #666;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.headline-text h2 {
+    margin: 0 0 10px;
+    font-size: 24px;
+}
+
+.headline-text p:not(.label) {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.headline-text a,
+.news-row a {
+    color: #333;
+    font-size: 13px;
+}
+
+/* Berita terbaru dan kolom kanan */
+.main-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(220px, 1fr);
+    gap: 24px;
+}
+
+.section-title {
+    margin: 0 0 12px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #999;
+    font-size: 19px;
+}
+
+.news-row {
+    display: grid;
+    grid-template-columns: 145px 1fr;
+    gap: 16px;
+    padding: 15px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.news-image {
+    min-height: 105px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #dedede;
+    border: 1px dashed #999;
+    color: #555;
+    font-size: 12px;
+}
+
+.news-row h3 {
+    margin: 0 0 7px;
+    font-size: 16px;
+}
+
+.news-row p:not(.label) {
+    margin: 0 0 8px;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+/* Kolom kanan */
+.right-column {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.side-box {
+    padding: 15px;
+    background: white;
+    border: 1px solid #bbb;
+}
+
+.side-box .section-title {
+    font-size: 17px;
+}
+
+.side-box ol {
+    padding-left: 22px;
+    margin-bottom: 0;
+}
+
+.side-box li {
+    margin: 12px 0;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.side-box a {
+    color: #333;
+}
+
+.categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+}
+
+.categories a {
+    padding: 6px 9px;
+    background: #e5e5e5;
+    border: 1px solid #bbb;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.info-box p {
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+/* Footer */
+.footer {
+    padding: 22px 6%;
+    text-align: center;
+    background: #ddd;
+    border-top: 1px solid #aaa;
+    font-size: 13px;
+}
+
+.footer p {
+    margin: 6px 0;
+}
+
+/* Penyesuaian layar mobile */
+@media (max-width: 700px) {
+    .header {
+        padding: 14px 4%;
+    }
+
+    .brand h1 {
+        font-size: 20px;
+    }
+
+    .tanggal {
+        display: none;
+    }
+
+    .navbar {
+        padding: 0 4%;
+        flex-wrap: wrap;
+    }
+
+    .navbar a {
+        padding: 12px 10px;
+        font-size: 12px;
+    }
+
+    .container {
+        width: 92%;
+        margin: 14px auto;
+    }
+
+    .headline {
+        grid-template-columns: 1fr;
+    }
+
+    .headline-image {
+        min-height: 160px;
+        border-right: 0;
+        border-bottom: 1px dashed #999;
+    }
+
+    .headline-text {
+        padding: 16px;
+    }
+
+    .headline-text h2 {
+        font-size: 20px;
+    }
+
+    .main-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .news-row {
+        grid-template-columns: 105px 1fr;
+        gap: 12px;
+    }
+
+    .news-image {
+        min-height: 90px;
+    }
+
+    .news-row h3 {
+        font-size: 14px;
+    }
+}
