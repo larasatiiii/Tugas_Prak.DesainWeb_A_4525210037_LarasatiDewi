@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pendaftaran</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<div class="container">
+
+    <h1>Formulir Pendaftaran</h1>
+    <p style="text-align:center">
+        Silakan isi formulir sesuai kebutuhan.
+    </p>
+
+    <!-- FORM INDIVIDU -->
+    <section class="card">
+        <h2>1. Pendaftaran Kursus</h2>
+        <p class="catatan">
+            Form pendaftaran peserta kursus.
+        </p>
+
+        <form id="formKursus">
+
+            <div class="form-group">
+                <label for="namaKursus">Nama Lengkap</label>
+                <input type="text" id="namaKursus"
+                       name="nama" placeholder="Masukkan nama"
+                       required>
+            </div>
+
+            <div class="form-group">
+                <label for="emailKursus">Email</label>
+                <input type="email" id="emailKursus"
+                       name="email" placeholder="nama@email.com"
+                       required>
+            </div>
+
+            <div class="form-group">
+                <label for="passwordKursus">Password</label>
+                <input type="password" id="passwordKursus"
+                       name="password" minlength="8"
+                       placeholder="Minimal 8 karakter" required>
+            </div>
+
+            <div class="form-group">
+                <label for="umur">Umur</label>
+                <input type="number" id="umur" name="umur"
+                       min="1" max="100" required>
+            </div>
+
+            <div class="form-group">
+                <label for="tanggalKursus">Tanggal Pendaftaran</label>
+                <input type="date" id="tanggalKursus"
+                       name="tanggal" required>
+            </div>
+
+            <div class="form-group">
+                <label for="program">Program Kursus</label>
+                <select id="program" name="program" required>
+                    <option value="">-- Pilih Program --</option>
+                    <option value="Web Development">Web Development</option>
+                    <option value="Desain Grafis">Desain Grafis</option>
+                    <option value="Digital Marketing">Digital Marketing</option>
+                </select>
+            </div>
+
+            <div class="form-group pilihan">
+                <label>Metode Belajar</label>
+
+                <label for="online">
+                    <input type="radio" id="online"
+                           name="metode" value="Online" required>
+                    Online
+                </label>
+
+                <label for="offline">
+                    <input type="radio" id="offline"
+                           name="metode" value="Offline">
+                    Offline
+                </label>
+            </div>
+
+            <div class="form-group pilihan">
+                <label>Fasilitas Tambahan</label>
+
+                <label for="modul">
+                    <input type="checkbox" id="modul"
+                           name="fasilitas" value="Modul">
+                    Modul
+                </label>
+
+                <label for="sertifikat">
+                    <input type="checkbox" id="sertifikat"
+                           name="fasilitas" value="Sertifikat">
+                    Sertifikat
+                </label>
+            </div>
+
+            <div class="buttons">
+                <button type="submit" class="simpan">
+                    Daftar
+                </button>
+                <button type="reset" class="reset">
+                    Reset
+                </button>
+                <button type="button" class="bantuan"
+                        onclick="alert('Silakan lengkapi semua data pendaftaran.')">
+                    Bantuan
+                </button>
+            </div>
+        </form>
+    </section>
+
+    <!-- FORM STUDI KASUS -->
+    <section class="card">
+        <h2>2. Penerimaan Mahasiswa Baru</h2>
+        <p class="catatan">
+            Formulir pendaftaran calon mahasiswa baru.
+        </p>
+
+        <form id="formMahasiswa">
+
+            <div class="form-group">
+                <label for="namaMahasiswa">Nama Lengkap</label>
+                <input type="text" id="namaMahasiswa"
+                       name="nama" placeholder="Nama sesuai ijazah"
+                       required>
+            </div>
+
+            <div class="form-group">
+                <label for="emailMahasiswa">Email</label>
+                <input type="email" id="emailMahasiswa"
+                       name="email" placeholder="nama@email.com"
+                       required>
+            </div>
+
+            <div class="form-group">
+                <label for="passwordMahasiswa">Password</label>
+                <input type="password" id="passwordMahasiswa"
+                       name="password" minlength="8"
+                       placeholder="Minimal 8 karakter" required>
+            </div>
+
+            <div class="form-group">
+                <label for="nilai">Nilai Rata-rata</label>
+                <input type="number" id="nilai" name="nilai"
+                       min="0" max="100" step="0.01"
+                       placeholder="Contoh: 85.50" required>
+            </div>
+
+            <div class="form-group">
+                <label for="tanggalLahir">Tanggal Lahir</label>
+                <input type="date" id="tanggalLahir"
+                       name="tanggal_lahir" required>
+            </div>
+
+            <div class="form-group pilihan">
+                <label>Jenis Kelamin</label>
+
+                <label for="laki">
+                    <input type="radio" id="laki"
+                           name="jenis_kelamin" value="Laki-laki"
+                           required>
+                    Laki-laki
+                </label>
+
+                <label for="perempuan">
+                    <input type="radio" id="perempuan"
+                           name="jenis_kelamin" value="Perempuan">
+                    Perempuan
+                </label>
+            </div>
+
+            <div class="form-group">
+                <label for="jurusan">Pilihan Jurusan</label>
+                <select id="jurusan" name="jurusan" required>
+                    <option value="">-- Pilih Jurusan --</option>
+                    <option value="Informatika">Informatika</option>
+                    <option value="Sistem Informasi">Sistem Informasi</option>
+                    <option value="Manajemen">Manajemen</option>
+                    <option value="Akuntansi">Akuntansi</option>
+                </select>
+            </div>
+
+            <div class="buttons">
+                <button type="submit" class="simpan">
+                    Daftar Mahasiswa
+                </button>
+                <button type="reset" class="reset">
+                    Reset
+                </button>
+                <button type="button" class="bantuan"
+                        onclick="alert('Hubungi panitia penerimaan mahasiswa baru untuk bantuan.')">
+                    Bantuan
+                </button>
+            </div>
+        </form>
+    </section>
+
+</div>
+
+<script>
+    document.querySelectorAll("form").forEach(function(form) {
+        form.addEventListener("submit", function(event) {
+            event.preventDefault();
+            alert("Form berhasil diperiksa! Ini hanya tampilan, data tidak disimpan.");
+        });
+    });
+</script>
+
+</body>
+</html>
+```

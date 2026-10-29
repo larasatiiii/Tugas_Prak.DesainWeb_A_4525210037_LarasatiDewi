@@ -1,0 +1,117 @@
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 30px 15px;
+            font-family: Arial, sans-serif;
+            background: #f1f5f9;
+            color: #1e293b;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: #1d4ed8;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px #00000012;
+        }
+
+        h2 {
+            color: #2563eb;
+            margin-top: 0;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 7px;
+            font-weight: bold;
+        }
+
+        input:not([type="radio"]):not([type="checkbox"]),
+        select,
+        textarea {
+            width: 100%;
+            padding: 11px;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            font-size: 15px;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: 2px solid #93c5fd;
+            border-color: #2563eb;
+        }
+
+        .pilihan label {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-right: 15px;
+            font-weight: normal;
+        }
+
+        .pilihan input {
+            margin: 0;
+        }
+
+        .buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 22px;
+        }
+
+        button {
+            border: none;
+            padding: 11px 18px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .simpan {
+            background: #2563eb;
+            color: white;
+        }
+
+        .reset {
+            background: #e2e8f0;
+            color: #1e293b;
+        }
+
+        .bantuan {
+            background: #16a34a;
+            color: white;
+        }
+
+        button:hover {
+            opacity: 0.8;
+        }
+
+        .catatan {
+            color: #64748b;
+            font-size: 14px;
+        }
+
+        @media (max-width: 500px) {
+            .card {
+                padding: 18px;
+            }
+        }
