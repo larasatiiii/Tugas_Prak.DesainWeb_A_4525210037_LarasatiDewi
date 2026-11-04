@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registrasi Event — TechBloom 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="page">
+    <header class="hero">
+      <span class="top-note">✦ EVENT REGISTRATION 2026</span>
+      <h1>TechBloom <span style="color:#ed8eae">.</span></h1>
+      <p>Temukan ide baru, perluas koneksi, dan kembangkan kemampuan digitalmu bersama komunitas teknologi.</p>
+    </header>
+
+    <section class="event-strip" aria-label="Informasi event">
+      <div class="event-chip"><span class="chip-icon">📅</span><span><strong>Sabtu, 21 November 2026</strong>Tanggal pelaksanaan</span></div>
+      <div class="event-chip"><span class="chip-icon">⏰</span><span><strong>09.00 – 15.00 WIB</strong>Waktu acara</span></div>
+      <div class="event-chip"><span class="chip-icon">📍</span><span><strong>Auditorium Digital</strong>Lokasi acara</span></div>
+    </section>
+
+    <section class="form-card">
+      <div class="card-heading">
+        <h2>Formulir Pendaftaran</h2>
+        <p>Lengkapi data di bawah ini. Kolom bertanda <span class="required">*</span> wajib diisi.</p>
+      </div>
+
+      <form id="registrationForm" novalidate>
+        <div class="section-title"><span class="section-number">01</span> Informasi pribadi</div>
+        <div class="grid">
+          <div class="field">
+            <label for="nama">Nama lengkap <span class="required">*</span></label>
+            <input type="text" id="nama" name="nama" placeholder="Contoh: Andi Saputra">
+            <small class="error" id="namaError"></small>
+          </div>
+          <div class="field">
+            <label for="email">Alamat email <span class="required">*</span></label>
+            <input type="email" id="email" name="email" placeholder="nama@email.com">
+            <small class="error" id="emailError"></small>
+          </div>
+
+          <div class="field full">
+            <span class="legend">Jenis kelamin <span class="required">*</span></span>
+            <div class="choice-row" id="genderGroup">
+              <label class="choice"><input type="radio" name="gender" value="Laki-laki"> Laki-laki</label>
+              <label class="choice"><input type="radio" name="gender" value="Perempuan"> Perempuan</label>
+            </div>
+            <small class="error" id="genderError"></small>
+          </div>
+
+          <div class="field">
+            <label for="kategori">Kategori peserta <span class="required">*</span></label>
+            <select id="kategori" name="kategori">
+              <option value="">Pilih kategori peserta</option>
+              <option value="Pelajar">Pelajar</option>
+              <option value="Mahasiswa">Mahasiswa</option>
+              <option value="Umum">Umum</option>
+              <option value="Profesional">Profesional</option>
+            </select>
+            <small class="error" id="kategoriError"></small>
+          </div>
+          <div class="field">
+            <label for="sesi">Pilihan sesi <span class="required">*</span></label>
+            <select id="sesi" name="sesi">
+              <option value="">Pilih sesi acara</option>
+              <option value="Pagi">Sesi pagi (09.00–11.00)</option>
+              <option value="Siang">Sesi siang (11.00–13.00)</option>
+              <option value="Sore">Sesi sore (13.00–15.00)</option>
+            </select>
+            <small class="error" id="sesiError"></small>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+        <div class="section-title"><span class="section-number">02</span> Minat dan tujuan</div>
+        <div class="grid">
+          <div class="field full">
+            <span class="legend">Topik yang diminati <span class="required">*</span></span>
+            <div class="choice-row" id="interestGroup">
+              <label class="choice"><input type="checkbox" name="minat" value="Web Development"> Web Development</label>
+              <label class="choice"><input type="checkbox" name="minat" value="Mobile Development"> Mobile Development</label>
+              <label class="choice"><input type="checkbox" name="minat" value="Artificial Intelligence"> Artificial Intelligence</label>
+              <label class="choice"><input type="checkbox" name="minat" value="Cyber Security"> Cyber Security</label>
+              <label class="choice"><input type="checkbox" name="minat" value="UI/UX Design"> UI/UX Design</label>
+            </div>
+            <small class="error" id="minatError"></small>
+          </div>
+          <div class="field full">
+            <label for="alasan">Alasan mengikuti event <span class="required">*</span></label>
+            <textarea id="alasan" name="alasan" placeholder="Ceritakan hal yang ingin kamu pelajari dari event ini..."></textarea>
+            <small class="error" id="alasanError"></small>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+        <div class="section-title"><span class="section-number">03</span> Dokumen pendukung</div>
+        <div class="field">
+          <label for="identitas">Upload kartu identitas <span class="required">*</span></label>
+          <div class="upload-box">
+            <div class="upload-icon">📎</div>
+            <div class="upload-copy">
+              <strong>Pilih file identitasmu</strong>
+              <span>Format JPG, PNG, atau PDF · Maksimal 2 MB</span>
+            </div>
+            <input type="file" id="identitas" name="identitas" accept=".jpg,.jpeg,.png,.pdf">
+          </div>
+          <small class="error" id="identitasError"></small>
+        </div>
+
+        <div id="formResult" class="result" role="status" aria-live="polite"></div>
+        <div class="submit-row">
+          <p class="privacy">🔒 Data yang kamu isi hanya digunakan sebagai simulasi pendaftaran event pada halaman ini.</p>
+          <button type="submit">Kirim Pendaftaran <span aria-hidden="true">→</span></button>
+        </div>
+      </form>
+    </section>
+    <footer>Made with ♥ for curious minds · TechBloom 2026</footer>
+  </main>
+
+  <script>
+    const form = document.getElementById('registrationForm');
+    const result = document.getElementById('formResult');
+    const allowedTypes = ['image/jpeg', 'image/png', 'application/pdf'];
+    const maxFileSize = 2 * 1024 * 1024;
+
+    function showError(id, message, fieldId) {
+      document.getElementById(id).textContent = message;
+      if (fieldId) document.getElementById(fieldId).classList.toggle('invalid', Boolean(message));
+    }
+
+    function clearErrors() {
+      document.querySelectorAll('.error').forEach(el => el.textContent = '');
+      document.querySelectorAll('.invalid').forEach(el => el.classList.remove('invalid'));
+      result.className = 'result';
+      result.textContent = '';
+    }
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+      clearErrors();
+
+      const nama = document.getElementById('nama');
+      const email = document.getElementById('email');
+      const kategori = document.getElementById('kategori');
+      const sesi = document.getElementById('sesi');
+      const alasan = document.getElementById('alasan');
+      const fileInput = document.getElementById('identitas');
+      const file = fileInput.files[0];
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+      let valid = true;
+
+      if (nama.value.trim().length < 3) {
+        showError('namaError', 'Nama wajib diisi minimal 3 karakter.', 'nama'); valid = false;
+      }
+      if (!emailPattern.test(email.value.trim())) {
+        showError('emailError', 'Masukkan alamat email dengan format yang benar.', 'email'); valid = false;
+      }
+      if (!document.querySelector('input[name="gender"]:checked')) {
+        showError('genderError', 'Silakan pilih salah satu jenis kelamin.'); valid = false;
+      }
+      if (!kategori.value) {
+        showError('kategoriError', 'Silakan pilih kategori peserta.', 'kategori'); valid = false;
+      }
+      if (!sesi.value) {
+        showError('sesiError', 'Silakan pilih sesi acara.', 'sesi'); valid = false;
+      }
+      if (!document.querySelector('input[name="minat"]:checked')) {
+        showError('minatError', 'Pilih minimal satu topik yang diminati.'); valid = false;
+      }
+      if (alasan.value.trim().length < 10) {
+        showError('alasanError', 'Alasan wajib diisi minimal 10 karakter.', 'alasan'); valid = false;
+      }
+      if (!file) {
+        showError('identitasError', 'Silakan unggah kartu identitas.', 'identitas'); valid = false;
+      } else {
+        if (!allowedTypes.includes(file.type)) {
+          showError('identitasError', 'Format file harus JPG, PNG, atau PDF.', 'identitas'); valid = false;
+        } else if (file.size > maxFileSize) {
+          showError('identitasError', 'Ukuran file maksimal 2 MB.', 'identitas'); valid = false;
+        }
+      }
+
+      if (!valid) {
+        result.textContent = 'Pendaftaran belum dapat diproses. Periksa kembali bagian yang ditandai.';
+        result.className = 'result fail';
+        const firstInvalid = document.querySelector('.invalid') || document.querySelector('.error:not(:empty)');
+        if (firstInvalid) firstInvalid.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        return;
+      }
+
+      result.textContent = 'Yeay! Semua validasi berhasil. Data pendaftaran valid (simulasi front-end, belum dikirim atau disimpan ke server).';
+      result.className = 'result success';
+      result.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+
+    // Hapus pesan error pada field saat pengguna mulai memperbaikinya.
+    ['nama', 'email', 'kategori', 'sesi', 'alasan', 'identitas'].forEach(id => {
+      const el = document.getElementById(id);
+      el.addEventListener('input', () => {
+        const error = document.getElementById(id + 'Error');
+        if (error) error.textContent = '';
+        el.classList.remove('invalid');
+      });
+      el.addEventListener('change', () => {
+        const error = document.getElementById(id + 'Error');
+        if (error) error.textContent = '';
+        el.classList.remove('invalid');
+      });
+    });
+    document.querySelectorAll('input[name="gender"], input[name="minat"]').forEach(el => {
+      el.addEventListener('change', () => {
+        document.getElementById(el.name === 'gender' ? 'genderError' : 'minatError').textContent = '';
+      });
+    });
+  </script>
+</body>
+</html>
